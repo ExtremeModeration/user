@@ -12,7 +12,7 @@ node {
     echo "My branch is: ${env.BRANCH_NAME}"
 
     // make gradlew executable
-    sh "dos2unix gradlew && chmod +x gradlew"
+    sh "chmod +x gradlew"
 
     // build the binary
     sh "./gradlew clean build"
