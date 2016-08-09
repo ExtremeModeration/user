@@ -11,6 +11,9 @@ node {
     //branch name from Jenkins environment variables
     echo "My branch is: ${env.BRANCH_NAME}"
 
+    // make gradlew executable
+    sh "dos2unix gradlew && chmod +x gradlew"
+
     // build the binary
     sh "./gradlew clean build"
 
